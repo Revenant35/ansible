@@ -22,32 +22,39 @@
   tags:
     - snap
 
-# - name: Install CLion
-#   become: true
-#   community.general.snap:
-#     name: clion
-#     classic: true
-#   tags:
-#     - snap
+- name: Install CLion
+  become: true
+  become_user: root
+  community.general.snap:
+    name: clion
+    classic: true
+  tags:
+    - snap
 
-# - name: Install PyCharm
-#   community.general.snap:
-#     name: pycharm-professional
-#     classic: true
-#   tags:
-#     - snap
+- name: Install PyCharm
+  become: true
+  become_user: root
+  community.general.snap:
+    name: pycharm-professional
+    classic: true
+  tags:
+    - snap
 
-# - name: Install WebStorm
-#   community.general.snap:
-#     name: webstorm
-#     classic: true
-#   tags:
-#     - snap
+- name: Install WebStorm
+  become: true
+  become_user: root
+  community.general.snap:
+    name: webstorm
+    classic: true
+  tags:
+    - snap
 
-# - name: Install IntelliJ IDEA
-#   community.general.snap:
-#     name: intellij-idea-ultimate
-#     classic: true
-#   tags:
-#     - snap
+- name: Install IntelliJ IDEA
+  become: true
+  become_user: root
+  community.general.snap:
+    name: intellij-idea-ultimate
+    classic: true
+  tags:
+    - snap
   
