@@ -1,0 +1,53 @@
+- name: Install Spotify
+  community.general.snap:
+    name: spotify
+  tags:
+    - snap
+
+- name: Install Discord
+  community.general.snap:
+    name: discord
+  tags:
+    - snap
+
+- name: Install VSCode
+  community.general.snap:
+    name: code
+  tags:
+    - snap
+
+- name: Install Brave Browser
+  community.general.snap:
+    name: brave
+  tags:
+    - snap
+
+# - name: Install CLion
+#   become: true
+#   community.general.snap:
+#     name: clion
+#     classic: true
+#   tags:
+#     - snap
+
+# - name: Install PyCharm
+#   community.general.snap:
+#     name: pycharm-professional
+#     classic: true
+#   tags:
+#     - snap
+
+# - name: Install WebStorm
+#   community.general.snap:
+#     name: webstorm
+#     classic: true
+#   tags:
+#     - snap
+
+# - name: Install IntelliJ IDEA
+#   community.general.snap:
+#     name: intellij-idea-ultimate
+#     classic: true
+#   tags:
+#     - snap
+  

@@ -19,5 +19,6 @@
     - import_tasks: tasks/git-setup.yml
     - import_tasks: tasks/node-setup.yml
     - import_tasks: tasks/npm-packages.yml
-    - import_tasks: tasks/brave.yml
+    - import_tasks: tasks/snap.yml
+    # - import_tasks: tasks/brave.yml
     # - import_tasks: tasks/dotfiles.yml
