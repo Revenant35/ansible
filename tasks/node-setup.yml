@@ -1,28 +1,12 @@
-- name: Install eslint
-  npm:
-    name: eslint
-    global: yes
-  tags:
-    - install
-    - node
-- name: Install Typescript server
-  npm:
-    name: typescript-language-server
-    global: yes
-  tags:
-    - install
-    - node
-- name: Install Typescript
-  npm:
-    name: typescript
-    global: yes
-  tags:
-    - install
-    - node
-- name: Install TS-Node
-  npm:
-    name: ts-node
-    global: yes
-  tags:
-    - install
-    - node
+- name: Install nvm
+  ansible.builtin.shell: >
+    curl -o- https://raw.githubusercontent.com/creationix/nvm/{{ nvm_version }}/install.sh | bash
+  args:
+    executable: /bin/bash
+    chdir: "$HOME"
+    creates: "$HOME/.nvm/nvm.sh"
+- name: Install node
+  ansible.builtin.shell: >
+    /bin/bash -c "source $HOME/.nvm/nvm.sh && nvm install --lts && nvm use --lts"
+  args:
+    creates: "$HOME/.nvm/alias"
