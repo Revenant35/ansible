@@ -1,22 +1,22 @@
-- name: Install Spotify
-  community.general.snap:
-    name: spotify
-  tags:
-    - snap
-
 - name: Install Discord
+  become: true
+  become_user: root
   community.general.snap:
     name: discord
   tags:
     - snap
 
 - name: Install VSCode
+  become: true
+  become_user: root
   community.general.snap:
     name: code
   tags:
     - snap
 
 - name: Install Brave Browser
+  become: true
+  become_user: root
   community.general.snap:
     name: brave
   tags:

@@ -1,0 +1,29 @@
+- name: Add Spotify key
+  become: true
+  become_user: root
+  apt_key:
+    url: https://download.spotify.com/debian/pubkey_6224F9941A8AA6D1.gpg
+    state: present
+  tags:
+    - spotify
+    - install
+
+- name: Add Spotify repository
+  become: true
+  become_user: root
+  apt_repository:
+    repo: deb http://repository.spotify.com stable non-free
+    state: present
+  tags:
+    - spotify
+    - install
+
+- name: Install Spotify
+  become: true
+  become_user: root
+  apt:
+    name: spotify-client
+    state: present
+  tags:
+    - spotify
+    - install
